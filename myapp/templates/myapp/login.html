@@ -1,0 +1,10 @@
+<html>
+<body>
+     <form id="login_form" method="post" action="{% url 'myapp:user_login' %}">
+        {% csrf_token %}
+        {{ loginform }}
+        <input type="submit" name="submit1" value="Submit" />
+    </form>
+<a href="forgotpassword">Forgot Password?</a>
+</body>
+</html>

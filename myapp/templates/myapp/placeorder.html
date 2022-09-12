@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html'%}
+
+{% block body_block %}
+
+    <h1>Place an order</h1>
+    <p>{{ msg }}</p>
+        {% if courlist %}
+        <h2>Currently available courses:</h2>
+            <ul>
+                {% for cour in courlist %}
+                    <li>{{ cour.name }} ............ (${{ cour.price }})</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form id="order_form" method="post" action="{% url 'myapp:place_order' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="submit1" value="Submit order" />
+        </form>
+{% endblock %}

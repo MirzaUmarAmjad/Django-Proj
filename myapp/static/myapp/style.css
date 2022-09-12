@@ -1,0 +1,14 @@
+body {
+  background-color: coral;
+    color: white;
+}
+h1{
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    font-family: "Brush Script MT";
+}
+.hbar1 {
+           display: inline;
+           margin: 15px;
+       }
